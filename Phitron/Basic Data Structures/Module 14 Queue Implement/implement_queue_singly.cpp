@@ -37,6 +37,8 @@ class Node
 
 kire koire
 
+দেক তো এখন ঠিক আছে নাকি
+
 int main()
 {
     
