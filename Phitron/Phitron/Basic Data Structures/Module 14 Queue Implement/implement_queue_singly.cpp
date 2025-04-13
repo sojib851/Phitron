@@ -1,1 +1,1 @@
-are bhai ekhon jamu na ami tui e ja 
+hoo bhai ekhon thik ache tui e ja re vai 
