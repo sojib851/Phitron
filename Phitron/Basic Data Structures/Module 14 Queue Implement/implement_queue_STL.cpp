@@ -6,60 +6,44 @@ class Node
 public:
     int val;
     Node *next;
+    Node* prev;
     Node(int val) // node with constructor
     {
         this->val = val;
         this->next = NULL;
+        this->prev = NULL;
+
     }
 };
 
 class myQueue
 {
 public:
-    Node *head = NULL;
-    Node *tail = NULL;
-    int sz = 0;
+    list<int> l;
 
     void push(int val)
     {
-        sz++;
-        Node *newNode = new Node(val);
-        if (head == NULL)
-        {
-            head = newNode;
-            tail = newNode;
-            return;
-        }
-        tail->next = newNode;
-        tail = tail->next;
+        l.push_back(val);
     }
     void pop()
     {
-        sz--;
-        Node *deleteNode = head;
-
-        head = head->next;
-        delete deleteNode;
-        if (head == NULL)
-        {
-            tail = NULL;
-        }
+        l.pop_front();
     }
     int front()
     {
-        return head->val;
+        return l.front();
     }
     int back()
     {
-        return tail->val;
+        return l.back();
     }
     int size()
     {
-        return sz;
+        return l.size();
     }
     bool empty()
     {
-        return head == NULL;
+        return l.empty();
     }
 };
 
